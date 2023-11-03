@@ -36,8 +36,8 @@ function createBoxes(amount) {
     margin-top:${10}px;
     "></div>`;
   }
-  boxes.innerHTML = markup.join(``);
+  boxesEl.innerHTML = markup.join(``);
 }
 function destroyBoxes() {
-  boxes.innerHTML = "";
+  boxesEl.innerHTML = "";
 }

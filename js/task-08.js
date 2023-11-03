@@ -5,27 +5,38 @@ function onFormSubmit(event) {
 
   event.preventDefault();
 
-  console.log(event.currentTarget)
-
-  const formEl = event.currentTarget.elements;
-
-  if (formEl.email.value === "" || formEl.password.value === "") {
-    return alert(" Заповніть всі поля ");
+  const { email, password } = evt.currentTarget.elements;
+  if (email.value === "" || password.value === "") {
+      alert("All inputs must be filled")
+  } else {
+      const userData = {
+          "email": email.value,
+          "password": password.value,
+      };
+      console.log(userData);
   }
-  const email = formEl.email.value;
-  const password = formEl.password.value;
+  evt.currentTarget.reset();
+} 
+// console.log(event.currentTarget)
 
-  const formData = {
-    email, password,
-  }
+  // const formEl = event.currentTarget.elements;
+
+  // if (formEl.email.value === "" || formEl.password.value === "") {
+  //   return alert(" Заповніть всі поля ");
+  // }
+  // const email = formEl.email.value;
+  // const password = formEl.password.value;
+
+  // const formData = {
+  //   email, password,
+  // }
   
-  console.log(`email: ${formEl.email.value}, Password: ${formEl.password.value}`);
+  // console.log(`email: ${formEl.email.value}, Password: ${formEl.password.value}`);
    
-  this.reset();
+  // this.reset();
   
     // console.log(formData);
 //   formEl.email.value = ``;
 //   formEl.password.value = ``;
  // event.currentTarget.reset(); 
 
-}
