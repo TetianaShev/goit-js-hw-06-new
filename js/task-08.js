@@ -5,18 +5,22 @@ function onFormSubmit(event) {
 
   event.preventDefault();
 
-  const { email, password } = evt.currentTarget.elements;
+  const { email, password } = event.currentTarget.elements;
   if (email.value === "" || password.value === "") {
-      alert("All inputs must be filled")
+      alert("All inputs must be filled");
   } else {
       const userData = {
-          "email": email.value,
-          "password": password.value,
+          email: email.value,
+          password: password.value,
       };
-      console.log(userData);
+      // console.log(userData);
   }
-  evt.currentTarget.reset();
+  event.currentTarget.reset();
 } 
+
+
+
+
 // console.log(event.currentTarget)
 
   // const formEl = event.currentTarget.elements;

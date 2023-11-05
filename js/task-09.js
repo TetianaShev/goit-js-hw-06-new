@@ -12,7 +12,7 @@ changeColorEl.addEventListener('click', handlerClick);
 function handlerClick(evt) {
   const randomColor = getRandomHexColor();
   textColor.textContent = randomColor;
-  console.log(randomColor);
+  // console.log(randomColor);
   document.body.style.backgroundColor = randomColor;
 };
 
